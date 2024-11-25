@@ -72,7 +72,7 @@ The security subsystem keeps track of the security policies and accounts that re
 
 ### Windows Authentication Process Diagram
 
-![Auth_process1.webp](Auth_process1.webp)
+![imgs/Auth_process1.webp](imgs/Auth_process1.webp)
 
 Local interactive logon is performed by the interaction between the logon process ([WinLogon](https://www.microsoftpressstore.com/articles/article.aspx?p=2228450&seqNum=8)), the logon user interface process (`LogonUI`), the `credential providers`, `LSASS`, one or more `authentication packages`, and `SAM` or `Active Directory`. Authentication packages, in this case, are the Dynamic-Link Libraries (`DLLs`) that perform authentication checks. For example, for non-domain joined and interactive logins, the authentication package `Msv1_0.dll` is used.
 
@@ -116,7 +116,7 @@ Microsoft introduced a security feature in Windows NT 4.0 to help improve the se
 
 ### Credential Manager
 
-![authn_credman_credprov.webp](authn_credman_credprov.webp)
+![imgs/authn_credman_credprov.webp](imgs/authn_credman_credprov.webp)
 
 Source: [Microsoft Docs](https://docs.microsoft.com/en-us/windows-server/security/windows-authentication/credentials-processes-in-windows-authentication).
 

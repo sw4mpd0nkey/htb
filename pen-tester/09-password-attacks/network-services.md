@@ -288,7 +288,7 @@ New Certificate details:
 Do you trust the above certificate? (Y/T/N) Y
 ```
 
-![](https://academy.hackthebox.com/storage/modules/147/RDP.png)
+![](imgs/RDP.png)
 
 ---
 

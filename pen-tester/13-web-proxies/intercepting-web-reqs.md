@@ -9,11 +9,11 @@ Now that we have set up our proxy, we can use it to intercept and manipulate var
 
 In Burp, we can navigate to the `Proxy` tab, and request interception should be on by default. If we want to turn request interception on or off, we may go to the `Intercept` sub-tab and click on `Intercept is on/off` button to do so:
 
-![Burp Intercept On](burp_intercept_htb_on.jpg)
+![Burp Intercept On](imgs/burp_intercept_htb_on.jpg)
 
 Once we turn request interception on, we can start up the pre-configured browser and then visit our target website after spawning it from the exercise at the end of this section. Then, once we go back to Burp, we will see the intercepted request awaiting our action, and we can click on `forward` to forward the request:
 
-![Burp Intercept Page](burp_intercept_page.jpg)
+![Burp Intercept Page](imgs/burp_intercept_page.jpg)
 
 Note: as all Firefox traffic will be intercepted in this case, we may see another request has been intercepted before this one. If this happens, click 'Forward', until we get the request to our target IP, as shown above.
 
@@ -21,23 +21,23 @@ Note: as all Firefox traffic will be intercepted in this case, we may see anothe
 
 In ZAP, interception is off by default, as shown by the green button on the top bar (green indicates that requests can pass and not be intercepted). We can click on this button to turn the Request Interception on or off, or we can use the shortcut \[`CTRL+B`\] to toggle it on or off:
 
-![ZAP Intercept On](zap_intercept_htb_on.jpg)
+![ZAP Intercept On](imgs/zap_intercept_htb_on.jpg)
 
 Then, we can start the pre-configured browser and revisit the exercise webpage. We will see the intercepted request in the top-right pane, and we can click on the step (right to the red `break` button) to forward the request:
 
-![ZAP Intercept Page](zap_intercept_page.jpg)
+![ZAP Intercept Page](imgs/zap_intercept_page.jpg)
 
 ZAP also has a powerful feature called `Heads Up Display (HUD)`, which allows us to control most of the main ZAP features from right within the pre-configured browser. We can enable the `HUD` by clicking its button at the end of the top menu bar:
 
-![ZAP HUD On](zap_enable_HUD.jpg)
+![ZAP HUD On](imgs/zap_enable_HUD.jpg)
 
 The HUD has many features that we will cover as we go through the module. For intercepting requests, we can click on the second button from the top on the left pane to turn request interception on:
 
-![](zap_hud_break.jpg)
+![](imgs/zap_hud_break.jpg)
 
 Now, once we refresh the page or send another request, the HUD will intercept the request and will present it to us for action:
 
-![](zap_hud_break_request.jpg)
+![](imgs/zap_hud_break_request.jpg)
 
 We can choose to `step` to send the request and examine its response and break any further requests, or we can choose to `continue` and let the page send the remaining requests. The `step` button is helpful when we want to examine every step of the page's functionality, while `continue` is useful when we are only interested in a single request and can forward the remaining requests once we reach our target request.
 
@@ -84,9 +84,9 @@ Typically, we can only specify numbers in the `IP` field using the browser, as t
 
 So, let us change the `ip` parameter's value from `1` to `;ls;` and see how the web application handles our input:
 
-![ping_manipulate_request.jpg](ping_manipulate_request.jpg)
+![imgs/ping_manipulate_request.jpg](imgs/ping_manipulate_request.jpg)
 
 Once we click continue/forward, we will see that the response changed from the default ping output to the `ls` output, meaning that we successfully manipulated the request to inject our command:
 
-![ping_inject.jpg](ping_inject.jpg) 
+![ping_inject.jpg](imgs/ping_inject.jpg) 
 

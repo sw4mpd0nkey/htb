@@ -10,11 +10,11 @@ In our previous exercise, the `IP` field only allowed us to input numeric values
 
 In Burp, we can enable response interception by going to (`Proxy>Options`) and enabling `Intercept Response` under `Intercept Server Responses`:
 
-![Burp Enable Response Int](response_interception_enable.jpg)
+![Burp Enable Response Int](imgs/response_interception_enable.jpg)
 
 After that, we can enable request interception once more and refresh the page with \[`CTRL+SHIFT+R`\] in our browser (to force a full refresh). When we go back to Burp, we should see the intercepted request, and we can click on `forward`. Once we forward the request, we'll see our intercepted response:
 
-![Burp Intercept Response](response_intercept_response_1_1.jpg)
+![Burp Intercept Response](imgs/response_intercept_response_1_1.jpg)
 
 Let's try changing the `type="number"` on line 27 to `type="text"`, which should enable us to write any value we want. We will also change the `maxlength="3"` to `maxlength="100"` so we can enter longer input:
 
@@ -37,7 +37,7 @@ Exercise: Try using the payload we used last time directly within the browser, t
 
 Let's try to see how we can do the same with ZAP. As we saw in the previous section, when our requests are intercepted by ZAP, we can click on `Step`, and it will send the request and automatically intercept the response:
 
-![ZAP Intercept Response](zap_response_intercept_response.jpg)
+![ZAP Intercept Response](imgs/zap_response_intercept_response.jpg)
 
 Once we make the same changes we previously did and click on `Continue`, we will see that we can also use any input value.
 

@@ -30,11 +30,11 @@ Another important step when using Burp Proxy/ZAP with our browser is to install 
 
 We can install Burp's certificate once we select Burp as our proxy in `Foxy Proxy`, by browsing to `http://burp`, and download the certificate from there by clicking on `CA Certificate`:
 
-![burp_cert.jpg](burp_cert.jpg)
+![burp_cert.jpg](imgs/burp_cert.jpg)
 
 To get ZAP's certificate, we can go to (`Tools>Options>Dynamic SSL Certificate`), then click on `Save`:
 
-![zap_cert.jpg](zap_cert.jpg)
+![zap_cert.jpg](imgs/zap_cert.jpg)
 
 We can also change our certificate by generating a new one with the `Generate` button.
 

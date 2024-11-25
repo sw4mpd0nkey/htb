@@ -21,13 +21,13 @@ We can go to (`Proxy>Options>Match and Replace`) and click on `Add` in Burp. As 
 
 Once we enter the above options and click `Ok`, our new Match and Replace option will be added and enabled and will start automatically replacing the `User-Agent` header in our requests with our new User-Agent. We can verify that by visiting any website using the pre-configured Burp browser and reviewing the intercepted request. We will see that our User-Agent has indeed been automatically replaced:
 
-![burp_match_replace_user_agent_2.jpg](burp_match_replace_user_agent_2.jpg)
+![imgs/burp_match_replace_user_agent_2.jpg](imgs/burp_match_replace_user_agent_2.jpg)
 
 ### ZAP Replacer
 
 ZAP has a similar feature called `Replacer`, which we can access by pressing \[`CTRL+R`\] or clicking on `Replacer` in ZAP's options menu. It is fairly similar to what we did above, so we can click on `Add` and add the same options we user earlier:
 
-![zap_match_replace_user_agent_1.jpg](zap_match_replace_user_agent_1.jpg)
+![imgs/zap_match_replace_user_agent_1.jpg](imgs/zap_match_replace_user_agent_1.jpg)
 
 - `Description`: `HTB User-Agent`.
 - `Match Type`: `Request Header (will add if not present)`.
@@ -41,7 +41,7 @@ ZAP also provides the option to set the `Initiators`, which we can access by cli
 
 We can now enable request interception by pressing \[`CTRL+B`\], then can visit any page in the pre-configured ZAP browser:
 
-![zap_match_replace_user_agent_2.jpg](zap_match_replace_user_agent_2.jpg)
+![imgs/zap_match_replace_user_agent_2.jpg](imgs/zap_match_replace_user_agent_2.jpg)
 
 ## Automatic Response Modification
 
@@ -49,7 +49,7 @@ The same concept can be used with HTTP responses as well. In the previous sectio
 
 Let us go back to (`Proxy>Options>Match and Replace`) in Burp to add another rule. This time we will use the type of `Response body` since the change we want to make exists in the response's body and not in its headers. In this case, we do not have to use regex as we know the exact string we want to replace, though it is possible to use regex to do the same thing if we prefer
 
-![burp_match_replace_response_1.jpg](burp_match_replace_response_1.jpg)
+![imgs/burp_match_replace_response_1.jpg](imgs/burp_match_replace_response_1.jpg)
 
 - `Type`: `Response body`.
 - `Match`: `type="number"`.
